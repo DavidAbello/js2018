@@ -4,7 +4,7 @@ const validateDni = (dni) => {
     const nieRexp = /^[XYZ]{1}[0-9]{7}[TRWAGMYFPDXBNJZSQVHLCKET]{1}$/i
     const str = dni.toString().toUpperCase()
 
-    if(!nifRexp.test(str) && !nieRexp.test(str)) console.log('DNI incorrecto')
+    if(!nifRexp.test(str) && !nieRexp.test(str)) return console.log('DNI incorrecto')
 
     const nie = str
         .replace(/^[X]/, '0')
@@ -16,7 +16,7 @@ const validateDni = (dni) => {
 
     if(validChars.charAt(charIndex) === letter) console.log('DNI válido')
 
-    console.log('DNI incorrecto')
+    //console.log('DNI incorrecto')
 }
 
 const validateEmail = (email) => {
